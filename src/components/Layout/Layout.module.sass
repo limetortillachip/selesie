@@ -1,4 +1,89 @@
 @use '../../styles/base.sass' as *
 
+
+.page,
+.top
+    +grid-flex($flow: column nowrap)
+    gap: $cushion
+
 .page
-    background: red
+    flex: 0 0 80%
+    color: $secondary
+    background: $primary
+    border-radius: 10px 10px 0 0
+    box-shadow: 2px 2px $shadow
+    border: 1px solid $shadow
+    font:
+        size: 14px
+        family: $text
+        weight: 500
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+        font-family: $titles
+
+    h2
+        font-size: 2em
+
+    a
+        color: $accent1
+        font-weight: 700
+        text-decoration-thickness: 1px
+        text-underline-offset: 2px
+
+    b,
+    strong
+        font-weight: 800
+
+    em,
+    i
+        font:
+            style: italic
+            weight: 600
+
+.content,
+.title
+    flex: 1
+
+.top,
+.foo
+    flex: 0
+
+.content,
+.top>header
+    padding-inline: $bit
+
+    
+
+
+.title,
+.foo
+    font-family: $code
+
+.navbar
+    background: $accent1
+    border: 1px solid $shadow
+    border-radius: 5px 5px 0 0
+    border-bottom: 2px solid $accent2
+
+    
+.title
+    flex: 4
+    padding-block-start: $bit
+    h1
+        font:
+            size: 4em
+            weight: 900
+
+        letter-spacing: -0.05em
+
+
+.foo
+    padding-block-end: $cushion
+    footer
+        +sel-strong
+        text-align: center
+        color: $accent3

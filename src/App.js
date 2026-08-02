@@ -4,6 +4,7 @@ import AboutMe from "./pages/AboutMe";
 import Layout from "./components/Layout/Layout";
 import Credits from "./pages/Credits";
 import Blog from "./pages/Blog";
+import "./App.css";
 function App() {
   return (
     <div className="App">

@@ -1,12 +1,29 @@
-$primary: hsl(342, 100%, 15%)
-$secondary: hsl(342, 57%, 65%)
-$accent1: hsl(342, 61%, 35%) //#912344
-$accent2: hsl(342, 100%, 97%)
-$accent3: hsl(300, 77%, 25%)
+@use 'display' as *
 
-=selenix-border
-    background: $accent2
+$primary: #30144B
+$secondary: #C588FF
+$accent1: #D057B5
+$accent2: #7F0865
+$accent3: #AAC944
+$shadow: #230E37
+
+
+=sel-border
     border-radius: 5px
-    border: 1px solid $accent1
-    box-shadow: 1px 1px 10px $primary, 2px 2px $secondary
-    
+    border: 1px solid $secondary
+    box-shadow:   2px 2px $secondary, 1px 1px 10px $shadow
+
+=sel-post
+    background: $secondary
+    color: $primary
+    padding: $cushion $bit
+
+    a
+        color: $accent2 !important
+
+=sel-blurb($rounded)
+    background: $accent3
+    color: $shadow
+    padding: 2px 10px
+    border-radius: $rounded
+    font-weight: 600

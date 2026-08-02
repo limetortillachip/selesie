@@ -5,18 +5,22 @@ import Nav from "../Nav/Nav";
 function Layout() {
   return (
     <article className={styles.page}>
-      <header>
-        <div class={styles.title}>
-          <h1>selesie</h1>
-        </div>
-        <div class={styles.navbar}>
+      <div className={styles.top}>
+        <div className={styles.navbar}>
           <Nav />
         </div>
-      </header>
-      <div class={styles.content}>
+        <header>
+          <div className={styles.title}>
+            <h1>selesie</h1>
+          </div>
+        </header>
+      </div>
+      <div className={styles.content}>
         <Outlet />
       </div>
-      <footer>limetortillachip &copy; 2026.</footer>
+      <div className={styles.foo}>
+        <footer>limetortillachip &copy; 2026.</footer>
+      </div>
     </article>
   );
 }

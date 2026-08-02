@@ -1,0 +1,33 @@
+@use '../../styles/base.sass' as *
+
+.navBar
+    +grid-flex($flow: row wrap)
+    justify-content: space-evenly
+
+.navLink
+    flex: 0 0 auto
+    +grid-flex($flow: row nowrap)
+    gap: 5px
+    padding-block: calc($cushion/2)
+
+
+#link
+    flex: 0
+    height: 20px
+    flex: 0 0 auto
+
+    a
+        color: $primary
+        font:
+            family: $titles
+            weight: 800
+            size: 1.25em
+        
+        text:
+            decoration: none
+            transform: lowercase
+
+.icon
+    flex: 0
+    align-self: center
+    color: $accent2
