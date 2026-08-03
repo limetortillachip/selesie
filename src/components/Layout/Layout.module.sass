@@ -56,8 +56,6 @@
 .top>header
     padding-inline: $bit
 
-    
-
 
 .title,
 .foo
@@ -73,6 +71,8 @@
 .title
     flex: 4
     padding-block-start: $bit
+    +grid-flex($flow: row nowrap)
+
     h1
         font:
             size: 4em
@@ -86,4 +86,4 @@
     footer
         +sel-strong
         text-align: center
-        color: $accent3
+        color: $accent1

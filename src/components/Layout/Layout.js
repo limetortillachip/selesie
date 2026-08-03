@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import styles from "./Layout.module.sass";
 import Nav from "../Nav/Nav";
+import { MoonIcon } from "@phosphor-icons/react";
 
 function Layout() {
   return (
@@ -11,7 +12,12 @@ function Layout() {
         </div>
         <header>
           <div className={styles.title}>
-            <h1>selesie</h1>
+            <span>
+              <h1>selesie</h1>
+            </span>
+            <span id={styles.icon}>
+              <MoonIcon size={16} weight="fill" />
+            </span>
           </div>
         </header>
       </div>
