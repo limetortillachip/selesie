@@ -9,4 +9,5 @@
   padding-inline: 2em;
   padding-block-start: 2em;
   padding-block-end: 0;
+  overflow: scroll;
 }

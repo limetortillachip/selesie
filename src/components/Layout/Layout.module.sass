@@ -4,10 +4,10 @@
 .page,
 .top
     +grid-flex($flow: column nowrap)
-    gap: $cushion
+    gap: $bit
 
 .page
-    flex: 0 0 80%
+    flex: 0 0 85%
     color: $secondary
     background: $primary
     border-radius: 10px 10px 0 0
@@ -24,13 +24,14 @@
     h5,
     h6
         font-family: $titles
+        margin-block: $bit $cushion
 
     h2
         font-size: 2em
 
     a
         color: $accent1
-        font-weight: 700
+        font-weight: 600
         text-decoration-thickness: 1px
         text-underline-offset: 2px
 
@@ -54,7 +55,7 @@
 
 .content,
 .top>header
-    padding-inline: $bit
+    padding-inline: calc($bit *3)
 
 
 .title,
@@ -73,7 +74,8 @@
     padding-block-start: $bit
     +grid-flex($flow: row nowrap)
 
-    h1
+    h1    
+        margin-block: $cushion 0
         font:
             size: 4em
             weight: 900

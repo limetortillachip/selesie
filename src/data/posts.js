@@ -10,6 +10,9 @@ export const postList = [
   {
     title: "c'est la vie!",
     date: "July 18, 2026 10:22:00",
-    body: ["Praesent condimentum dolor sit amet bibendum sodales."],
+    body: [
+      "Praesent condimentum dolor sit amet bibendum sodales.",
+      "My favorite website is [Google!](https://google.com 'Google')",
+    ],
   },
 ];
