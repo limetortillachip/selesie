@@ -1,10 +1,10 @@
 @use 'display' as *
 
 $primary: #30144B
-$secondary: #C588FF
+$secondary: #ECD9FF 
 $accent1: #D057B5
 $accent2: #7F0865
-$accent3: #ECD9FF
+$accent3: #C588FF
 $shadow: #230E37
 
 
@@ -14,8 +14,12 @@ $shadow: #230E37
     box-shadow:   2px 2px $secondary, 1px 1px 10px $shadow
 
 =sel-post
-    background: $accent3
     color: $primary
+    background: $secondary
+    padding: $byte calc($bit *3)
+    border-radius: 5px
+    border: 1px solid $accent2
+    box-shadow:   2px 2px $accent1, 1px 1px 10px $shadow
 
     a
         color: $accent2 !important

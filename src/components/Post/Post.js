@@ -1,9 +1,9 @@
 import { compiler } from "markdown-to-jsx";
 import styles from "./Post.module.sass";
 
-function Post({ post }) {
+function Post({ post, key }) {
   return (
-    <article className={styles.post}>
+    <article className={styles.post} key={key}>
       <div className={styles.text}>
         <div className={styles.title}>
           <h3>{post.title}</h3>

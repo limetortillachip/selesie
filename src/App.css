@@ -1,13 +1,13 @@
 .App {
-  height: 100vh;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
   line-height: 150%;
   background: url("assets/crossed-heart-pixel.png");
   background-color: #30144b;
   background-size: 2px;
   padding-inline: 2em;
-  padding-block-start: 2em;
+  padding-block-start: 0;
   padding-block-end: 0;
   overflow: scroll;
 }

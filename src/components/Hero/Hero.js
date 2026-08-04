@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <article className={styles.hero}>
       <div>
-        Hi! Welcome to my space with thoughts, photography, and coding projects.
+        Welcome to my page with my thoughts, photography, and coding projects.
       </div>
     </article>
   );

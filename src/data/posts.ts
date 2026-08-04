@@ -16,3 +16,55 @@ export const postList = [
     ],
   },
 ];
+
+interface Post {
+  id: number;
+  title: string;
+  date: string;
+  body: string[];
+}
+
+function createPost(config: Post): {
+  id: number;
+  title: string;
+  date: string;
+  body: string[];
+} {
+  return {
+    id: config.id + 1,
+    title: config.title || "my post title.",
+    date: new Date(config.date).toLocaleDateString(),
+    body: config.body,
+  };
+}
+
+export const getPosts = (num: number) => {
+  const posts: Array<{}> = [];
+  //console.log(posts);
+
+  postList.forEach((post, i) => {
+    let postObj = createPost({
+      id: i,
+      title: post.title,
+      date: post.date,
+      body: post.body,
+    });
+    posts.push(postObj);
+  });
+
+  //console.log(posts);
+
+  const getRandomPost = () => {
+    let num = 1;
+    num = Math.floor(Math.random() * posts.length + 1);
+    //console.log(num);
+
+    let randomPost = posts.find((post) => post.id === num);
+
+    return randomPost;
+  };
+
+  //getRandomPost();
+
+  return num > 0 ? posts : getRandomPost();
+};

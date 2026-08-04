@@ -4,10 +4,11 @@
 .page,
 .top
     +grid-flex($flow: column nowrap)
-    gap: $bit
+    gap: $byte
 
 .page
-    flex: 0 0 85%
+    flex: 0 1 85%
+    margin-block-start: 2em;
     color: $secondary
     background: $primary
     border-radius: 10px 10px 0 0
@@ -18,7 +19,7 @@
         family: $text
         weight: 500
 
-    h2,
+
     h3,
     h4,
     h5,
@@ -27,7 +28,11 @@
         margin-block: $bit $cushion
 
     h2
-        font-size: 2em
+        text-transform: lowercase
+        font:
+            family: $code
+            size: 2em
+            weight: 800
 
     a
         color: $accent1
@@ -75,6 +80,8 @@
     +grid-flex($flow: row nowrap)
 
     h1    
+
+        color: $accent3
         margin-block: $cushion 0
         font:
             size: 4em
@@ -84,7 +91,6 @@
 
 
 .foo
-    padding-block-end: $cushion
     footer
         +sel-strong
         text-align: center

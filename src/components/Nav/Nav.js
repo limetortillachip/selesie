@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Nav.module.sass";
 import {
-  HandHeartIcon,
-  MoonIcon,
   NewspaperClippingIcon,
   ShootingStarIcon,
   StarAndCrescentIcon,
