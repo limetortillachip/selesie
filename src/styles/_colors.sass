@@ -7,11 +7,15 @@ $accent2: #7F0865
 $accent3: #C588FF
 $shadow: #230E37
 
+=sel-shadow($color)
+    box-shadow:   2px 2px $color, 1px 1px 10px $shadow  
+
+
 
 =sel-border
     border-radius: 5px
     border: 1px solid $secondary
-    box-shadow:   2px 2px $secondary, 1px 1px 10px $shadow
+    +sel-shadow($secondary)
 
 =sel-post
     color: $primary
@@ -23,3 +27,52 @@ $shadow: #230E37
 
     a
         color: $accent2 !important
+
+=sel-card
+    flex: 0 1 40%
+    color: $primary
+    +grid-flex($flow: column nowrap)
+    +sel-shadow($accent2)
+    border: 1px solid $accent2
+    border-radius: 0 0 5px 5px
+    font-weight: 500
+    background: $accent2
+       
+
+    [data-card="title"]
+        +grid-flex($flow: row nowrap)
+        gap: $bit
+        flex: 0
+        border-bottom: 1px solid $accent2
+        background: $accent1
+        padding: $cushion $bit
+        
+        span
+            +grid-flex($flow: row)
+            align-items: center
+
+        h4
+            margin-block: 0
+            font:
+                size: 1.3em
+                weight: 800
+
+
+
+    [data-card="body"]
+        flex: 1
+        background: $secondary
+        padding: $bit
+        border-radius: 0 0 5px 5px
+
+        p
+            margin-block: 0
+
+    [data-card="link"]
+        background: $accent2
+        color: $primary
+        padding:  2px 5px
+
+        a
+            color: $accent3
+            font-weight: 700

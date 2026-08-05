@@ -2,6 +2,7 @@ import { compiler } from "markdown-to-jsx/react";
 import Post from "../Post/Post";
 import styles from "./Card.module.sass";
 import { Link } from "react-router-dom";
+import { QuotesIcon } from "@phosphor-icons/react";
 
 function PostCard({ card }) {
   const postCard = {
@@ -9,15 +10,19 @@ function PostCard({ card }) {
     body: card.body[0],
   };
   return (
-    <div>
-      <h4>{postCard.title}</h4>
-      <p>{compiler(postCard.body)}</p>
-      <div>
+    <>
+      <div data-card="title">
+        <span id="icon">
+          <QuotesIcon size={32} weight="fill" />
+        </span>
         <span>
-          <Link to="/blog">Read More</Link>
+          <h4>{postCard.title}</h4>
         </span>
       </div>
-    </div>
+      <div data-card="body">
+        <p>{compiler(postCard.body)}</p>
+      </div>
+    </>
   );
 }
 
