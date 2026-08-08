@@ -2,3 +2,18 @@
 
 .card
     +sel-card
+    +grid-flex($flow: column nowrap)
+
+    [data-card="caption"]
+        font-size: 0.85em
+        line-height: 110%
+
+    [data-card="image"]
+        +grid-flex($flow: row nowrap)
+
+        img
+            border-radius: 0 0 5px 5px
+            width: 100%
+            height: auto
+
+        

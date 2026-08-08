@@ -4,7 +4,7 @@ import styles from "./Posts.module.sass";
 
 function Posts() {
   const postList = getPosts(1);
-  //console.log(postList);
+  console.log(postList);
   return (
     <article className={styles.posts}>
       {postList.map((entry, i) => {

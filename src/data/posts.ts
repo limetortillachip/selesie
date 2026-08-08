@@ -1,4 +1,4 @@
-export const postList = [
+export const textList = [
   {
     title: "summers are so dim nowadays.",
     date: "August 2, 2026",
@@ -17,54 +17,68 @@ export const postList = [
   },
 ];
 
-interface Post {
+interface PostConfig {
   id: number;
   title: string;
-  date: string;
-  body: string[];
+  date: Date;
+  readonly type: string;
 }
 
-function createPost(config: Post): {
-  id: number;
-  title: string;
-  date: string;
+interface TextPost extends PostConfig {
   body: string[];
+  photos?: string[];
+}
+
+interface PhotoPost extends PostConfig {
+  photos: string[];
+}
+
+function createTextPost(config: TextPost): {
+  id: number;
+  type: string;
+  title: string;
+  date: Date;
+  body: string[];
+  photos?: string[];
 } {
   return {
     id: config.id + 1,
+    type: config.type,
     title: config.title || "my post title.",
-    date: new Date(config.date).toLocaleDateString(),
+    date: config.date,
     body: config.body,
+    photos: config.photos,
   };
 }
 
-export const getPosts = (num: number) => {
-  const posts: Array<{}> = [];
+export const getPosts = (num: number, type: string) => {
+  const textPostsList: Array<{}> = [];
   //console.log(posts);
 
-  postList.forEach((post, i) => {
-    let postObj = createPost({
+  textList.forEach((post, i) => {
+    let textObj = createTextPost({
       id: i,
+      type: "text",
       title: post.title,
-      date: post.date,
+      date: new Date(post.date),
       body: post.body,
     });
-    posts.push(postObj);
+    textPostsList.push(textObj);
   });
 
   //console.log(posts);
 
   const getRandomPost = () => {
     let num = 1;
-    num = Math.floor(Math.random() * posts.length + 1);
+    num = Math.floor(Math.random() * textPostsList.length + 1);
     //console.log(num);
 
-    let randomPost = posts.find((post) => post.id === num);
+    let randomPost = textPostsList.find((post) => post.id === num);
 
     return randomPost;
   };
 
-  //getRandomPost();
+  getRandomPost();
 
-  return num > 0 ? posts : getRandomPost();
+  return num > 0 ? textPostsList : getRandomPost();
 };
