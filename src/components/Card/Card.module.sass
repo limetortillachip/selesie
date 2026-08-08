@@ -1,8 +1,11 @@
 @use '../../styles/base.sass' as *
 
 .card
-    +sel-card
-    +grid-flex($flow: column nowrap)
+    flex: 1
+
+    article
+        +grid-flex($flow: column nowrap)
+        +sel-card
 
     [data-card="caption"]
         font-size: 0.85em
