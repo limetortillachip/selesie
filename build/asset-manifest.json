@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/selesie/static/css/main.5eb4ab46.css",
+    "main.js": "/selesie/static/js/main.f51fcd4b.js",
+    "static/js/453.6fae1e58.chunk.js": "/selesie/static/js/453.6fae1e58.chunk.js",
+    "index.html": "/selesie/index.html",
+    "main.5eb4ab46.css.map": "/selesie/static/css/main.5eb4ab46.css.map",
+    "main.f51fcd4b.js.map": "/selesie/static/js/main.f51fcd4b.js.map",
+    "453.6fae1e58.chunk.js.map": "/selesie/static/js/453.6fae1e58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5eb4ab46.css",
+    "static/js/main.f51fcd4b.js"
+  ]
+}
