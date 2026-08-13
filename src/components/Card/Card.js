@@ -3,10 +3,9 @@ import Post from "../Post/Post";
 import styles from "./Card.module.sass";
 import { Link } from "react-router-dom";
 import {
-  CodeSimpleIcon,
-  ImageIcon,
-  ImagesSquareIcon,
-  QuotesIcon,
+  CodeBlockIcon,
+  ImageSquareIcon,
+  NoteIcon,
 } from "@phosphor-icons/react";
 
 function PostCard({ card }) {
@@ -15,7 +14,7 @@ function PostCard({ card }) {
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
-            <QuotesIcon size={20} weight="fill" />
+            <NoteIcon size={16} weight="bold" />
           </div>
           <span data-card="type">post</span>
         </div>
@@ -43,7 +42,7 @@ function PhotoCard({ card }) {
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
-            <ImageIcon size={20} weight="fill" />
+            <ImageSquareIcon size={16} weight="bold" />
           </div>
           <span data-card="type">photo</span>
         </div>
@@ -73,7 +72,7 @@ function ProjectsCard({ card }) {
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
-            <CodeSimpleIcon size={20} weight="bold" />
+            <CodeBlockIcon size={16} weight="bold" />
           </div>
           <span data-card="type">projects</span>
         </div>

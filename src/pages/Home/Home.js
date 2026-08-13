@@ -22,13 +22,9 @@ function Home() {
       <Hero />
       <article className={styles.cards}>
         <div className={styles.items}>
-          <div className={styles.left}>
-            <Card card={postCard[postRandomNum]} />
-            <Card card={projectsCard} />
-          </div>
-          <div className={styles.right}>
-            <Card card={photoCard[photoRamdomNum]} />
-          </div>
+          <Card card={postCard[postRandomNum]} />
+          <Card card={photoCard[photoRamdomNum]} />
+          <Card card={projectsCard} />
         </div>
       </article>
     </article>

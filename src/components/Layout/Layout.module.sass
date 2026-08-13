@@ -1,11 +1,7 @@
 @use '../../styles/base.sass' as *
 
-
-.page,
-.top
-    +grid-flex($flow: column nowrap)
-
 .page
+    +grid-flex($flow: column nowrap)
     flex: 1
     color: $primary
     line-height: 175%;
@@ -54,6 +50,7 @@
     background-size: 3px
     //border-block: 1px solid $primary
     align-self: center
+    padding-inline: calc($bit *3)
     padding-block: $bit
 
 .content,
@@ -64,15 +61,12 @@
 .foo
     flex: 0
 
-.content,
-.top>header
-    padding-inline: calc($bit *3)
-    
-
 .top>header
     +grid-flex($flow: row nowrap)
     border-block-end: 1px solid $primary
     background: $accent1
+    padding-inline: $cushion
+    gap: $cushion
 
     [data-top="navbar"]
         flex: 5
@@ -81,7 +75,6 @@
 .title
     flex: 1
     +grid-flex($flow: row nowrap)
-    gap: $cushion
 
     h1  
         color: $accent2
@@ -105,3 +98,30 @@
         align: center
     
 
+/**
+    MEDIA QUERIES
+        source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+    */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+    .top>header
+        +grid-flex($flow: row wrap)
+
+        [data-top="navbar"]
+        flex: 6
+    
+    .title
+        align-self: center
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 

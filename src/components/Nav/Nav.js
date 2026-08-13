@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Nav.module.sass";
 import {
+  CameraIcon,
   NewspaperClippingIcon,
   ShootingStarIcon,
   StarAndCrescentIcon,
@@ -13,7 +14,7 @@ export default function Nav() {
       <nav className={styles.navBar}>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <StarAndCrescentIcon size={20} weight="fill" />
+            <StarAndCrescentIcon size={18} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/">Home</Link>
@@ -21,7 +22,7 @@ export default function Nav() {
         </div>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <UserCircleIcon size={20} weight="fill" />
+            <CameraIcon size={18} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/photography">Photography</Link>
@@ -29,7 +30,7 @@ export default function Nav() {
         </div>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <NewspaperClippingIcon size={20} weight="fill" />
+            <NewspaperClippingIcon size={18} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/blog">Blog</Link>
@@ -37,7 +38,7 @@ export default function Nav() {
         </div>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <ShootingStarIcon size={20} weight="fill" />
+            <ShootingStarIcon size={18} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/credits">Credits</Link>

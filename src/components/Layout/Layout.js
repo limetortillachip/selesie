@@ -5,7 +5,7 @@ import { MoonIcon } from "@phosphor-icons/react";
 
 function Layout() {
   return (
-    <article className={styles.page}>
+    <div className={styles.page}>
       <div className={styles.top}>
         <header>
           <div className={styles.title}>
@@ -27,7 +27,7 @@ function Layout() {
       <div className={styles.foo}>
         <footer>selesie &copy; 2026.</footer>
       </div>
-    </article>
+    </div>
   );
 }
 
