@@ -1,0 +1,120 @@
+import { compiler } from "markdown-to-jsx/react";
+import Post from "../Post/Post";
+import styles from "./Card.module.sass";
+import { Link } from "react-router-dom";
+import {
+  CodeSimpleIcon,
+  ImageIcon,
+  ImagesSquareIcon,
+  QuotesIcon,
+} from "@phosphor-icons/react";
+
+function PostCard({ card }) {
+  return (
+    <article data-selx="card">
+      <div data-card="inner">
+        <div data-card="card-title">
+          <div data-card="icon">
+            <QuotesIcon size={20} weight="fill" />
+          </div>
+          <span data-card="type">post</span>
+        </div>
+        <div data-card="post-title">
+          <span>
+            <h4>{card.title}</h4>
+          </span>
+        </div>
+        <div data-card="post-body">
+          <p>
+            {compiler(card.body[0])}...
+            <span>
+              <a href="/blog">Read More</a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function PhotoCard({ card }) {
+  return (
+    <article data-selx="card">
+      <div data-card="inner">
+        <div data-card="card-title">
+          <div data-card="icon">
+            <ImageIcon size={20} weight="fill" />
+          </div>
+          <span data-card="type">photo</span>
+        </div>
+        <div data-card="photo">
+          <img src={card.url} />
+        </div>
+        <div data-card="photo-caption">
+          <p>
+            Placerat in id cursus mi pretium tellus duis. Pretium tellus duis
+            convallis tempus leo eu aenean.
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function ProjectsCard({ card }) {
+  let projectsList = card.links;
+
+  const handleClick = (e) => {
+    return console.log(e.target);
+  };
+
+  return (
+    <article data-selx="card">
+      <div data-card="inner">
+        <div data-card="card-title">
+          <div data-card="icon">
+            <CodeSimpleIcon size={20} weight="bold" />
+          </div>
+          <span data-card="type">projects</span>
+        </div>
+        <div data-card="project-links">
+          {card.links.map((proj, i) => {
+            let projectLink = Object.entries(proj)[0];
+            console.log(projectLink);
+            return (
+              <div className="project" key={i}>
+                <span
+                  data-card="project-title"
+                  id="project-link"
+                  onClick={handleClick}
+                >
+                  <a href={projectLink[1]} target="_blank">
+                    {projectLink[0]}
+                  </a>
+                </span>
+                <span data-card=""></span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+const getCard = (card) => {
+  switch (card.type) {
+    case "text":
+      return <PostCard card={card} />;
+
+    case "photo":
+      return <PhotoCard card={card} />;
+
+    case "projects":
+      return <ProjectsCard card={card} />;
+  }
+};
+
+export default function Card({ card }) {
+  return <div className={styles.card}>{getCard(card)}</div>;
+}

@@ -1,0 +1,20 @@
+@use '../../styles/base.sass' as * 
+
+.post
+    flex: 1
+    +grid-flex($flow: row wrap)
+
+.text    
+    +sel-post
+    flex: 0 1 auto
+    border-radius: 5px
+
+.title
+    h3
+        font:
+            size: 1.75em
+            weight: 600
+
+.date
+    +sel-strong
+    color: $accent2

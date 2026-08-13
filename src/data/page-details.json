@@ -1,0 +1,24 @@
+{
+  "page_name": "Selesie",
+  "github_url": "https://github.com/limetortillachip/selesie",
+  "navigation": {
+    "home": "/",
+    "about": "/aboutme",
+    "photography": "/photos",
+    "blog": "/blog",
+    "credits": "/credits"
+  },
+  "projects": [
+    { "silly dev": "/" },
+    { "plant planner": "/" },
+    { "astro birthday": "/" }
+  ],
+  "sample_photos": [
+    "https://images.unsplash.com/photo-1538713404843-280cba18a4e3?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1557533670-6dfbe6453666?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1543164094-fa31ca95d5cf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1541434162325-1784ab65074e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1540777750272-bf628e8326f1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1490927051367-0e850ffa51a6?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  ]
+}

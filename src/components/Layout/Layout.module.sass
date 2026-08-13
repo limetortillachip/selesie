@@ -1,0 +1,107 @@
+@use '../../styles/base.sass' as *
+
+
+.page,
+.top
+    +grid-flex($flow: column nowrap)
+
+.page
+    flex: 1
+    color: $primary
+    line-height: 175%;
+    box-shadow: 2px 2px $shadow
+    border: 1px solid $shadow
+    font:
+        size: 14px
+        family: $text
+        weight: 500
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+        font-family: $titles
+        margin-block: $bit $cushion
+
+    h2
+        font:
+            size: 2.5em
+            weight: 800
+    a
+        color: $accent1
+        font-weight: 600
+        text-decoration-thickness: 1px
+        text-underline-offset: 2px
+
+    b,
+    strong
+        font-weight: 800
+
+    em,
+    i
+        font:
+            style: italic
+            weight: 600
+
+    img
+        width: 100%
+        height: auto
+
+.content
+    background: $accent3 url("../../assets/crossed-heart-pixel.png")
+    background-size: 3px
+    //border-block: 1px solid $primary
+    align-self: center
+    padding-block: $bit
+
+.content,
+.title
+    flex: 1
+
+.top,
+.foo
+    flex: 0
+
+.content,
+.top>header
+    padding-inline: calc($bit *3)
+    
+
+.top>header
+    +grid-flex($flow: row nowrap)
+    border-block-end: 1px solid $primary
+    background: $accent1
+
+    [data-top="navbar"]
+        flex: 5
+
+    
+.title
+    flex: 1
+    +grid-flex($flow: row nowrap)
+    gap: $cushion
+
+    h1  
+        color: $accent2
+        margin-block: 5px
+        font:
+            family: $code
+            size: 2em
+            weight: 800
+            style: italic
+        letter-spacing: -0.075em
+
+
+.foo>footer
+    +sel-strong
+    font-weight: 700
+    background: $accent1
+    padding: 5px 0 2px 0
+    border-block-start: 1px solid $primary
+    color: $accent2
+    text:
+        align: center
+    
+
