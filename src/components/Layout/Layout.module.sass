@@ -50,7 +50,7 @@
     background-size: 3px
     //border-block: 1px solid $primary
     align-self: stretch
-    padding-inline: calc($bit *3)
+    padding-inline: $bit
     padding-block: $bit
 
 .content,
@@ -77,11 +77,11 @@
     +grid-flex($flow: row nowrap)
 
     h1  
-        color: $accent2
-        margin-block: 5px
+        color: $primary
+        margin-block: 20px
         font:
             family: $code
-            size: 2em
+            size: 2.75em
             weight: 800
             style: italic
         letter-spacing: -0.075em
@@ -107,6 +107,10 @@
 @media only screen and (max-width: 600px)
     [data-homepage="cards"]
         +grid-flex($flow: column nowrap)
+
+    [data-card="user-title"],
+    [data-card="user-desc"]
+        font-size: 0.9em
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

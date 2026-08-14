@@ -6,7 +6,6 @@ export default function Photography() {
   const photosList = getPosts("photos");
   return (
     <>
-      <h2>Photography</h2>
       <Photos photos={photosList} />
     </>
   );

@@ -8,20 +8,20 @@ function Layout() {
     <div className={styles.page}>
       <div className={styles.top}>
         <header>
-          <div className={styles.title}>
-            <span>
-              <h1>selesie</h1>
-            </span>
-            <span id={styles.icon}>
-              <MoonIcon size={16} weight="fill" />
-            </span>
-          </div>
           <div data-top="navbar">
             <Nav />
           </div>
         </header>
       </div>
       <div className={styles.content}>
+        <div className={styles.title}>
+          <span>
+            <h1>selesie</h1>
+          </span>
+          <span id={styles.icon}>
+            <MoonIcon size={16} weight="fill" />
+          </span>
+        </div>
         <Outlet />
       </div>
       <div className={styles.foo}>
