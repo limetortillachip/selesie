@@ -6,7 +6,38 @@ import {
   CodeBlockIcon,
   ImageSquareIcon,
   NoteIcon,
+  UserCircleIcon,
 } from "@phosphor-icons/react";
+
+function UserCard({ card }) {
+  return (
+    <article data-selx="card">
+      <div data-card="inner">
+        <div data-card="card-title">
+          <div data-card="icon">
+            <UserCircleIcon size={16} weight="bold" />
+          </div>
+          <span data-card="type">user_card</span>
+        </div>
+        <div data-card="user-card">
+          <div data-card="user-icon">
+            <img src={card.photo} atl="user pic is pixelated" />
+          </div>
+          <div data-card="user-intro">
+            <div>
+              <span data-card="user-title">
+                <h4>{card.title}</h4>
+              </span>
+              <span data-card="user-desc">
+                <p>{compiler(card.desc)}</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 function PostCard({ card }) {
   return (
@@ -111,6 +142,9 @@ const getCard = (card) => {
 
     case "projects":
       return <ProjectsCard card={card} />;
+
+    case "user":
+      return <UserCard card={card} />;
   }
 };
 

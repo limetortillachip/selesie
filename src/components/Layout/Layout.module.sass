@@ -4,7 +4,7 @@
     +grid-flex($flow: column nowrap)
     flex: 1
     color: $primary
-    line-height: 175%;
+    line-height: 150%;
     box-shadow: 2px 2px $shadow
     border: 1px solid $shadow
     font:
@@ -49,7 +49,7 @@
     background: $accent3 url("../../assets/crossed-heart-pixel.png")
     background-size: 3px
     //border-block: 1px solid $primary
-    align-self: center
+    align-self: stretch
     padding-inline: calc($bit *3)
     padding-block: $bit
 
@@ -105,14 +105,9 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px)
-    .top>header
-        +grid-flex($flow: row wrap)
+    [data-homepage="cards"]
+        +grid-flex($flow: column nowrap)
 
-        [data-top="navbar"]
-        flex: 6
-    
-    .title
-        align-self: center
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 

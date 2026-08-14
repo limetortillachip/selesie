@@ -104,7 +104,7 @@ $shadow: #230E37
         letter-spacing: -0.01em
 
         font:
-            size: 0.95em
+            size: 0.80em
             family: $code
             weight: 700
 
@@ -120,7 +120,7 @@ $shadow: #230E37
         background: $accent1
         color: $primary
         font:
-            size: 1.5em
+            size: 1.60em
 
 
     [data-card="post-body"]
@@ -140,7 +140,7 @@ $shadow: #230E37
 
     [data-card="photo-caption"]
         font-size: 0.75em
-        line-height: 110%
+        line-height: 120%
         padding-inline: $bit
         background: $secondary 
         border-radius: 0 0 5px 5px 
@@ -164,3 +164,48 @@ $shadow: #230E37
 
         div
             background: $accent1
+
+    [data-card="user-card"]
+        +grid-flex($flow: row nowrap)
+        background: $accent2
+        padding-block-end: 5px
+
+        [data-card]
+            background: $accent1
+
+    [data-card="user-icon"]
+        flex: 1
+        +grid-flex($flow: row)
+        background: $primary
+        align-items: center
+        
+
+        img
+            flex: 1 1 auto
+            //border-radius: 50%
+
+    [data-card="user-intro"]
+        flex: 2
+        +grid-flex($flow: column)
+        justify-content: center
+
+        div
+            padding: $cushion $bit
+
+        h4,
+        p
+            margin-block: 0
+
+        h4
+            margin-block-end: calc($cushion/3)
+            font-size: 1.40em
+
+        p
+            text-align: justify
+
+            color: $shadow
+            font:
+                family: $titles
+                weight: 400
+                size: 0.95em
+            line-height: 120%
