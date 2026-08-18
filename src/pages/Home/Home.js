@@ -4,11 +4,11 @@ import { getPosts } from "../../data/posts.ts";
 import styles from "./Home.module.sass";
 
 function Home() {
-  const userCard = {
-    type: "user",
+  const devCard = {
+    type: "dev",
     title: "Hi! My name is Shanon.",
     desc: "*Soy peruana*, living in Rockville, Maryland. This page is a labor of love: fullstack web development project featuring my photography, thoughts, and other coding projects.",
-    photo: "https://i.imgur.com/c5yJEPa.png",
+    photo: "https://i.imgur.com/T2gJ0ch.png",
   };
 
   let projectsCard = {
@@ -26,7 +26,7 @@ function Home() {
   return (
     <article className={styles.homepage}>
       <div className={styles.items} data-homepage="cards">
-        <Card card={userCard} />
+        <Card card={devCard} />
         <Card card={postCard[postRandomNum]} />
         <Card card={photoCard[photoRamdomNum]} />
         <Card card={projectsCard} />

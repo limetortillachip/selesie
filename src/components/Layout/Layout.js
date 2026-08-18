@@ -25,7 +25,15 @@ function Layout() {
         <Outlet />
       </div>
       <div className={styles.foo}>
-        <footer>selesie &copy; 2026.</footer>
+        <footer>
+          <a
+            href="https://github.com/limetortillachip/selesie"
+            alt="github link"
+          >
+            selesie
+          </a>{" "}
+          &copy; 2026.
+        </footer>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import {
   UserCircleIcon,
 } from "@phosphor-icons/react";
 
-function UserCard({ card }) {
+function DevCard({ card }) {
   return (
     <article data-selx="card">
       <div data-card="inner">
@@ -17,18 +17,18 @@ function UserCard({ card }) {
           <div data-card="icon">
             <UserCircleIcon size={16} weight="bold" />
           </div>
-          <span data-card="type">user_card</span>
+          <span data-card="type">dev</span>
         </div>
-        <div data-card="user-card">
-          <div data-card="user-icon">
-            <img src={card.photo} atl="user pic is pixelated" />
+        <div data-card="dev-card">
+          <div data-card="dev-icon">
+            <img src={card.photo} atl="dev pic is pixelated" />
           </div>
-          <div data-card="user-intro">
+          <div data-card="dev-intro">
             <div>
-              <span data-card="user-title">
+              <span data-card="dev-title">
                 <h4>{card.title}</h4>
               </span>
-              <span data-card="user-desc">
+              <span data-card="dev-desc">
                 <p>{compiler(card.desc)}</p>
               </span>
             </div>
@@ -143,8 +143,8 @@ const getCard = (card) => {
     case "projects":
       return <ProjectsCard card={card} />;
 
-    case "user":
-      return <UserCard card={card} />;
+    case "dev":
+      return <DevCard card={card} />;
   }
 };
 

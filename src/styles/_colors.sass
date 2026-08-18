@@ -165,7 +165,7 @@ $shadow: #230E37
         div
             background: $accent1
 
-    [data-card="user-card"]
+    [data-card="dev-card"]
         +grid-flex($flow: row nowrap)
         background: $accent2
         padding-block-end: 5px
@@ -173,7 +173,7 @@ $shadow: #230E37
         [data-card]
             background: $accent1
 
-    [data-card="user-icon"]
+    [data-card="dev-icon"]
         flex: 1
         +grid-flex($flow: row)
         background: $primary
@@ -184,28 +184,30 @@ $shadow: #230E37
             flex: 1 1 auto
             //border-radius: 50%
 
-    [data-card="user-intro"]
+    [data-card="dev-intro"]
         flex: 2
         +grid-flex($flow: column)
         justify-content: center
+        border-left: 1px solid $accent2
 
         div
             padding: $cushion $bit
 
         h4,
         p
-            margin-block: 0
 
+            margin-block: 0
+            
         h4
             margin-block-end: calc($cushion/3)
-            font-size: 1.40em
+            font-size: 1.50em
 
         p
             text-align: justify
-
             color: $shadow
             font:
-                family: $titles
-                weight: 400
-                size: 0.95em
-            line-height: 120%
+                family: $code
+                size: 0.75em
+                weight: 500
+                
+            line-height: 130%
