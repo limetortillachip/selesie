@@ -31,8 +31,8 @@ function Layout() {
             alt="github link"
           >
             selesie
-          </a>{" "}
-          &copy; 2026.
+          </a>
+          &nbsp;&copy; 2026.
         </footer>
       </div>
     </div>

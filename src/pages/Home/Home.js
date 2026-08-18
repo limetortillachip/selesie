@@ -6,8 +6,8 @@ import styles from "./Home.module.sass";
 function Home() {
   const devCard = {
     type: "dev",
-    title: "Hi! My name is Shanon.",
-    desc: "29, Peruana living in Rockville, Maryland. This page is a labor of love: fullstack web development project featuring my photography, thoughts, and other coding projects.",
+    title: "Hi! Welcome to myspace.",
+    desc: "This page is a labor of love: fullstack web development project featuring my photography, thoughts, and other coding projects.",
     photo: "https://i.imgur.com/T2gJ0ch.png",
   };
 

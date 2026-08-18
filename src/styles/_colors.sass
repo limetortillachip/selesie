@@ -174,7 +174,7 @@ $shadow: #230E37
             background: $accent1
 
     [data-card="dev-icon"]
-        flex: 1
+        flex: 2
         +grid-flex($flow: row)
         background: $primary
         align-items: center
@@ -185,7 +185,7 @@ $shadow: #230E37
             //border-radius: 50%
 
     [data-card="dev-intro"]
-        flex: 2
+        flex: 3
         +grid-flex($flow: column)
         justify-content: center
         border-left: 1px solid $accent2
@@ -201,14 +201,18 @@ $shadow: #230E37
             
         h4
             margin-block-end: calc($cushion/3)
-            font-size: 1em
+            font-size: 0.85em
             
 
         p
-            text-align: justify
+            text-align: center
             color: $shadow
             font:
-                size: 0.60em
-                weight: 500
+                size: 0.70em
+                weight: 400
                 
-            line-height: 130%
+            line-height: 150%
+
+        b,
+        strong
+            font-weight:600
