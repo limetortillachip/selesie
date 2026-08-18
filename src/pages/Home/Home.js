@@ -7,7 +7,7 @@ function Home() {
   const devCard = {
     type: "dev",
     title: "Hi! My name is Shanon.",
-    desc: "*Soy peruana*, living in Rockville, Maryland. This page is a labor of love: fullstack web development project featuring my photography, thoughts, and other coding projects.",
+    desc: "29, Peruana living in Rockville, Maryland. This page is a labor of love: fullstack web development project featuring my photography, thoughts, and other coding projects.",
     photo: "https://i.imgur.com/T2gJ0ch.png",
   };
 
