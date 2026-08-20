@@ -7,7 +7,7 @@ function Home() {
   const devCard = {
     type: "dev",
     title: "Hi! Welcome to myspace.",
-    desc: "This page is a labor of love: fullstack web development project featuring my photography, thoughts, and other coding projects.",
+    desc: "This page is a labor of love: fullstack front-end web development project featuring my photography, thoughts, and other coding projects.",
     photo: "https://i.imgur.com/T2gJ0ch.png",
   };
 
