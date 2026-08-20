@@ -26,10 +26,16 @@ function Home() {
   return (
     <article className={styles.homepage}>
       <div data-homepage="cards">
-        <Card card={devCard} />
-        <Card card={projectsCard} />
-        <Card card={postCard[postRandomNum]} />
-        <Card card={photoCard[photoRamdomNum]} />
+        <div data-homepage="card">
+          <Card card={devCard} />
+        </div>
+        <div data-homepage="card">
+          <Card card={projectsCard} />
+          <Card card={postCard[postRandomNum]} />
+        </div>
+        <div data-homepage="card">
+          <Card card={photoCard[photoRamdomNum]} />
+        </div>
       </div>
     </article>
   );

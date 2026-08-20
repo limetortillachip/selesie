@@ -11,7 +11,7 @@ import {
 
 function DevCard({ card }) {
   return (
-    <article data-selx="card">
+    <article data-selx="card" data-card="dev">
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
@@ -41,7 +41,7 @@ function DevCard({ card }) {
 
 function PostCard({ card }) {
   return (
-    <article data-selx="card">
+    <article data-selx="card" data-card="post">
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
@@ -69,7 +69,7 @@ function PostCard({ card }) {
 
 function PhotoCard({ card }) {
   return (
-    <article data-selx="card">
+    <article data-selx="card" data-card="img">
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
@@ -99,7 +99,7 @@ function ProjectsCard({ card }) {
   };
 
   return (
-    <article data-selx="card">
+    <article data-selx="card" data-card="projs">
       <div data-card="inner">
         <div data-card="card-title">
           <div data-card="icon">
@@ -149,5 +149,5 @@ const getCard = (card) => {
 };
 
 export default function Card({ card }) {
-  return <div className={styles.card}>{getCard(card)}</div>;
+  return <>{getCard(card)}</>;
 }

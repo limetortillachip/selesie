@@ -112,20 +112,43 @@
     MEDIA QUERIES
         source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
     */
-
-/* DEFAULTS */
-[data-homepage="cards"]
-    @extend .selx
+    
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px)
     .page
         font-size: 0.75em
 
+    [data-homepage="cards"]
+        +grid-flex($flow: column nowrap)
+
+    [data-card="dev-card"],
+    [data-homepage="card"]
+        +grid-flex($flow: row nowrap)
+
+    [data-card="projs"]
+        flex: 1
+
+    [data-card="post"]
+        flex: 2
+
+    [data-card="dev-intro"]
+        border-left: 1px solid $accent2
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
+    [data-homepage="cards"]
+        +grid-flex($flow: row wrap)
+    
 
+    [data-card="dev-card"]
+        +grid-flex($flow: column)
+
+        [data-card="dev-intro"]
+            border-top: 1px solid $accent2
+
+    [data-homepage="card"]
+            flex: 45%
 
 
 /* Medium devices (landscape tablets, 768px and up) */
