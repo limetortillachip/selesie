@@ -100,6 +100,12 @@
     a
         color: $primary
         text-decoration: none
+
+    a:hover
+        color: $shadow
+
+    a:visited
+        color: $shadow
     
 
 /**
@@ -107,18 +113,20 @@
         source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
     */
 
+/* DEFAULTS */
+[data-homepage="cards"]
+    @extend .selx
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px)
-    [data-homepage="cards"]
-        +grid-flex($flow: column nowrap)
-
-    [data-card="user-title"],
-    [data-card="user-desc"]
-        font-size: 0.9em
+    .page
+        font-size: 0.75em
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
+
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) 

@@ -14,7 +14,7 @@ export default function Nav() {
       <nav className={styles.navBar}>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <StarAndCrescentIcon size={18} weight="fill" />
+            <StarAndCrescentIcon size={16} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/">Home</Link>
@@ -22,7 +22,7 @@ export default function Nav() {
         </div>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <CameraIcon size={18} weight="fill" />
+            <CameraIcon size={16} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/photography">Photography</Link>
@@ -30,7 +30,7 @@ export default function Nav() {
         </div>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <NewspaperClippingIcon size={18} weight="fill" />
+            <NewspaperClippingIcon size={16} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/blog">Blog</Link>
@@ -38,7 +38,7 @@ export default function Nav() {
         </div>
         <div className={styles.navLink}>
           <span className={styles.icon}>
-            <ShootingStarIcon size={18} weight="fill" />
+            <ShootingStarIcon size={16} weight="fill" />
           </span>
           <span id={styles.link}>
             <Link to="/credits">Credits</Link>

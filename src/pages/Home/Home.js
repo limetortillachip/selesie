@@ -25,11 +25,11 @@ function Home() {
 
   return (
     <article className={styles.homepage}>
-      <div className={styles.items} data-homepage="cards">
+      <div data-homepage="cards">
         <Card card={devCard} />
+        <Card card={projectsCard} />
         <Card card={postCard[postRandomNum]} />
         <Card card={photoCard[photoRamdomNum]} />
-        <Card card={projectsCard} />
       </div>
     </article>
   );
