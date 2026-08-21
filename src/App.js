@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Layout from "./components/Layout/Layout";
-import Credits from "./pages/Credits";
+import Credits from "./pages/Credits/Credits.js";
 import Blog from "./pages/Blog/Blog.js";
 import Photography from "./pages/Photography/Photography.js";
 import styles from "./App.module.sass";
