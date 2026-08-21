@@ -1,5 +1,10 @@
 import config from "./page-details.json";
+import { getPhotos } from "./photos-api";
 import { postList } from "./postList";
+
+let photos = await getPhotos();
+
+console.log(photos);
 
 interface PostConfig {
   id: number;
@@ -50,26 +55,35 @@ function createPhotoPost(config: PhotoPost): {
   };
 }
 
-export const getPosts = (type: string) => {
-  /**
-   * Switch for post functions
-   */
-  switch (type) {
-    case "text":
-      const textPostsList: Array<{}> = [];
-      postList.forEach((post, i: number) => {
-        let textObj = createTextPost({
-          id: i,
-          type: "text",
-          title: post.title,
-          date: new Date(post.date),
-          body: post.body,
-        });
-        textPostsList.push(textObj);
-      });
-      return textPostsList;
-    case "photos":
-      const photoPostsList: Array<{}> = [];
+export const getPosts = () => {
+  const posts = {
+    photos: [],
+    text: [],
+  };
+  postList.forEach((post, i: number) => {
+    let textObj = createTextPost({
+      id: i,
+      type: "text",
+      title: post.title,
+      date: new Date(post.date),
+      body: post.body,
+    });
+    posts.text.push(textObj);
+  });
+
+  photos.forEach((photo, i: number) => {
+    const url = "https://images-pull.b-cdn.net/";
+    let photoObj = createPhotoPost({
+      id: i,
+      type: "photo",
+      date: new Date("08/21/2026"),
+      url: `${url}${photo.objectName}`,
+    });
+    posts.photos.push(photoObj);
+  });
+
+  return posts;
+  /*
       config.sample_photos.forEach((photo, i: number) => {
         let photoObj = createPhotoPost({
           id: i,
@@ -78,36 +92,5 @@ export const getPosts = (type: string) => {
           url: photo,
         });
         photoPostsList.push(photoObj);
-      });
-      return photoPostsList;
-    default:
-      break;
-  }
+      });*/
 };
-/** 
-  type == "text"
-    ? postList.forEach((post, i: number) => {
-        let textObj = createTextPost({
-          id: i,
-          type: "text",
-          title: post.title,
-          date: new Date(post.date),
-          body: post.body,
-        });
-        textPostsList.push(textObj);
-      })
-    : type == "photos"
-      ? photos.forEach((photo, i: number) => {
-          let photoObj = createPhotoPost({
-            id: i,
-            type: "photo",
-            date: new Date("08/07/2026"),
-            url: photo,
-          });
-          photoPostsList.push(photoObj);
-        })
-      : console.log("nothing to see here!");
-
-  return type == "text" ? textPostsList : photoPostsList;
-};
-*/

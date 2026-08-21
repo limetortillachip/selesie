@@ -110,7 +110,7 @@ function ProjectsCard({ card }) {
         <div data-card="project-links">
           {card.links.map((proj, i) => {
             let projectLink = Object.entries(proj)[0];
-            console.log(projectLink);
+            //console.log(projectLink);
             return (
               <div className="project" key={i}>
                 <span
@@ -118,9 +118,7 @@ function ProjectsCard({ card }) {
                   id="project-link"
                   onClick={handleClick}
                 >
-                  <a href={projectLink[1]} target="_blank">
-                    {projectLink[0]}
-                  </a>
+                  <a href={projectLink[1]}>{projectLink[0]}</a>
                 </span>
                 <span data-card=""></span>
               </div>

@@ -1,7 +1,7 @@
-import Photo from "../Photo/Photo";
-import styles from "./Photos.module.sass";
+import Photo from "../../components/Photo/Photo.js";
+import styles from "./Photography.module.sass";
 
-function Photos({ photos }) {
+export default function Photography({ photos }) {
   return (
     <article className={styles.photos}>
       {photos.map((photo, i) => {
@@ -10,5 +10,3 @@ function Photos({ photos }) {
     </article>
   );
 }
-
-export default Photos;

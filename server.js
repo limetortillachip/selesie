@@ -6,12 +6,21 @@ const express = require("express");
 const path = require("path");
 const favicon = require("serve-favicon");
 const logger = require("morgan");
+const bunny = require("@bunny.net/storage-sdk");
 
 // Always require and configure near the top
 require("dotenv").config();
 
-// Connect to MongoDB
-require("./config/database");
+/* Connect to MongoDB
+require("./controllers/api/photos");*/
+
+/* Connect Bunny photos storage */
+const BUNNY_KEY = process.env.APP_ACCESS;
+const storageZone = bunny.zone.connect_with_accesskey(
+  bunny.regions.StorageRegion.SaoPaulo,
+  "images-storage",
+  BUNNY_KEY,
+);
 
 /**
  * create express app
@@ -31,15 +40,19 @@ app.use(express.json());
 //app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "build")));
 
-// middleware to verify token
-// assigns user obj of payload to req.user
-app.use(require("./config/checkToken"));
-
 /**
  * ROUTES
  */
 // Put API routes here, before the "catch all"
-app.use("/api/users", require("./routes/api/users"));
+app.route("/api/photos").get(async (req, res) => {
+  try {
+    const files = await bunny.file.list(storageZone, "/");
+    res.send(files);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Server error...");
+  }
+});
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
@@ -49,7 +62,7 @@ app.get("/*", function (req, res) {
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 2201;
 
 app.listen(port, function () {
   console.log(`Express app running on port ${port}`);

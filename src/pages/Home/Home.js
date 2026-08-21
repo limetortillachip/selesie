@@ -1,9 +1,8 @@
 import Card from "../../components/Card/Card.js";
 import config from "../../data/page-details.json";
-import { getPosts } from "../../data/posts.ts";
 import styles from "./Home.module.sass";
 
-function Home() {
+function Home({ posts }) {
   const devCard = {
     type: "dev",
     title: "Hi! Welcome to myspace.",
@@ -16,12 +15,8 @@ function Home() {
     links: config.projects,
   };
   //console.log(projectsCard);
-
-  const postCard = getPosts("text");
-  let postRandomNum = Math.floor(Math.random() * postCard.length);
-
-  const photoCard = getPosts("photos");
-  let photoRamdomNum = Math.floor(Math.random() * photoCard.length);
+  let randomPicNum = Math.floor(Math.random() * posts.photos.length);
+  let randomPostNum = Math.floor(Math.random() * posts.text.length);
 
   return (
     <article className={styles.homepage}>
@@ -31,10 +26,10 @@ function Home() {
         </div>
         <div data-homepage="card">
           <Card card={projectsCard} />
-          <Card card={postCard[postRandomNum]} />
+          <Card card={posts.text[randomPostNum]} />
         </div>
         <div data-homepage="card">
-          <Card card={photoCard[photoRamdomNum]} />
+          <Card card={posts.photos[randomPicNum]} />
         </div>
       </div>
     </article>
