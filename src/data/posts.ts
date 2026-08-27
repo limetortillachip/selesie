@@ -70,6 +70,7 @@ export const getPosts = () => {
     });
     posts.text.push(textObj);
   });
+  photos? (
 
   photos.forEach((photo, i: number) => {
     const url = "https://images-pull.b-cdn.net/";
@@ -80,10 +81,10 @@ export const getPosts = () => {
       url: `${url}${photo.objectName}`,
     });
     posts.photos.push(photoObj);
-  });
+  });) : 
 
-  return posts;
-  /*
+  
+  (
       config.sample_photos.forEach((photo, i: number) => {
         let photoObj = createPhotoPost({
           id: i,
@@ -92,5 +93,6 @@ export const getPosts = () => {
           url: photo,
         });
         photoPostsList.push(photoObj);
-      });*/
+      });) 
+  return posts;
 };
