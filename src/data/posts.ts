@@ -92,7 +92,7 @@ export const getPosts = () => {
           date: new Date("08/07/2026"),
           url: photo,
         });
-        photoPostsList.push(photoObj);
+        posts.photos.push(photoObj);
       });) 
   return posts;
 };
