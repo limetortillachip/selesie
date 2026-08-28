@@ -70,22 +70,18 @@ export const getPosts = () => {
     });
     posts.text.push(textObj);
   });
-  photos? (
-
-  photos.forEach((photo, i: number) => {
-    const url = "https://images-pull.b-cdn.net/";
-    let photoObj = createPhotoPost({
-      id: i,
-      type: "photo",
-      date: new Date("08/21/2026"),
-      url: `${url}${photo.objectName}`,
-    });
-    posts.photos.push(photoObj);
-  });) : 
-
-  
-  (
-      config.sample_photos.forEach((photo, i: number) => {
+  photos
+    ? photos.forEach((photo, i: number) => {
+        const url = "https://images-pull.b-cdn.net/";
+        let photoObj = createPhotoPost({
+          id: i,
+          type: "photo",
+          date: new Date("08/21/2026"),
+          url: `${url}${photo.objectName}`,
+        });
+        posts.photos.push(photoObj);
+      })
+    : config.sample_photos.forEach((photo, i: number) => {
         let photoObj = createPhotoPost({
           id: i,
           type: "photo",
@@ -93,6 +89,6 @@ export const getPosts = () => {
           url: photo,
         });
         posts.photos.push(photoObj);
-      });) 
+      });
   return posts;
 };

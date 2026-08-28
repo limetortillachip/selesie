@@ -26,13 +26,14 @@ function Layout() {
       </div>
       <div className={styles.foo}>
         <footer>
+          &copy;&nbsp;
           <a
             href="https://github.com/limetortillachip/selesie"
             alt="github link"
           >
             selesie
           </a>
-          &nbsp;&copy; 2026.
+          &nbsp;2026.
         </footer>
       </div>
     </div>

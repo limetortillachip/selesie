@@ -20,6 +20,12 @@
         font-family: $titles
         margin-block: $bit $cushion
 
+
+    h2
+        font:
+            size: 2em
+            weight: 700
+
     a
         color: $accent2
         font-weight: 600
@@ -45,8 +51,7 @@
     background-size: 3px
     //border-block: 1px solid $primary
     align-self: stretch
-    padding-inline: $bit
-    padding-block: $bit
+    padding: $bit
 
 .content,
 .title
@@ -76,7 +81,7 @@
         margin-block: 20px
         font:
             family: $code
-            size: 2.75em
+            size: 3.5em
             weight: 800
             style: italic
         letter-spacing: -0.075em
@@ -117,18 +122,16 @@
     [data-homepage="cards"]
         +grid-flex($flow: column nowrap)
 
-    [data-card="dev-card"],
-    [data-homepage="card"]
+    [data-card="dev"]
         +grid-flex($flow: row nowrap)
 
-    [data-card="projs"]
-        flex: 1
+        [data-card="dev-icon"]
+            flex: 2
+        
+        [data-card="intro"]
+            flex: 3
 
-    [data-card="post"]
-        flex: 2
 
-    [data-card="dev-intro"]
-        border-left: 1px solid $accent2
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
@@ -139,18 +142,28 @@
     [data-card="dev-card"]
         +grid-flex($flow: column)
 
-        [data-card="dev-intro"]
-            border-top: 1px solid $accent2
-
     [data-homepage="card"]
             flex: 45%
 
+    [data-card="post"],
+    [data-card="photo"]
+        flex: 75%
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) 
+    [data-homepage="card"]
+        flex: 50%
+
+   
+    
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) 
+    [data-homepage="card"]
+        flex: 40%
+
+    [data-card="dev"]
+        flex: 20%
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) 

@@ -27,53 +27,6 @@ $shadow: #230E37
     a
         color: $accent2 !important
 
-=sel-card
-    flex: 0 0 40%
-    color: $primary
-    +grid-flex($flow: column nowrap)
-    +sel-shadow($accent2)
-    border: 1px solid $accent2
-    border-radius: 0 0 5px 5px
-    font-weight: 500
-    background: $accent2
-       
-
-    [data-card="title"]
-        +grid-flex($flow: row nowrap)
-        gap: $bit
-        flex: 0
-        border-bottom: 1px solid $accent2
-        background: $accent1
-        padding: $cushion $bit
-        
-        span
-            +grid-flex($flow: row)
-            align-items: center
-
-        h4
-            margin-block: 0
-            font:
-                size: 1.3em
-                weight: 800
-
-    [data-card="body"]
-        flex: 1
-        background: $secondary
-        padding: $bit
-        border-radius: 0 0 5px 5px
-
-        p
-            margin-block: 0
-
-    [data-card="link"]
-        background: $accent2
-        color: $primary
-        padding:  2px 5px
-
-        a
-            color: $accent3
-            font-weight: 700
-
 .selx
     [data-selx="card"]
         +grid-flex($flow: column nowrap)
@@ -94,7 +47,7 @@ $shadow: #230E37
         +grid-flex ($flow: row nowrap)
         justify-content: flex-start
         align-items: center
-        border-radius: $cushion $cushion 0 0 
+        border-radius: 5px 5px 0 0 
         color: $secondary
         
 
@@ -126,19 +79,19 @@ $shadow: #230E37
     [data-card="post-body"]
         text-align: justify
         background: $secondary
-        border-radius: 0 0 $cushion $cushion
+        border-radius: 0 0 5px 5px
         padding: $bit
 
         p
             margin-block: 0
 
-    [data-card="photo"]
+    [data-card="img"]
         +grid-flex($flow: row nowrap)
         //padding: 2px
         background: $accent1
         border-bottom: 1px solid $accent2
 
-    [data-card="photo-caption"]
+    [data-card="img-caption"]
         font-size: 0.75em
         line-height: 120%
         padding-inline: $bit
@@ -168,55 +121,28 @@ $shadow: #230E37
         div
             background: $accent1
 
-    [data-card="dev-card"]
-        //+grid-flex($flow: row nowrap)
-        background: $accent2
-        padding-block-end: 5px
-
-        [data-card]
-            background: $accent1
 
     [data-card="dev-icon"]
-        flex: 2
-        +grid-flex($flow: row)
-        background: $primary
-        align-items: center
-        
+        +grid-flex($flow: column)
+        background: $accent2
+        align-items: flex-start
+        aspect-ratio: 1/1
 
         img
             flex: 1 1 auto
-            //border-radius: 50%
-
-    [data-card="dev-intro"]
-        flex: 4
-        +grid-flex($flow: column)
-        justify-content: center
-        
-
-        div
-            padding: $cushion $bit
-
-        h4,
-        p
-            margin-block: 0
-            
-        h4
-            margin-block: calc($cushion/3)
-            font-size: 1.3em
             
 
+    [data-card="intro"]
+        background: $accent1
+        padding-inline: $cushion
+
+        h2
+            margin-block: $cushion
+            font-size: 1.35em
+
         p
-            letter-spacing: 0.0125em
-            text:
-                align: justify
-                transform: uppercase
+            line-height: 150%
             font:
                 family: $code
-                size: 9px
-                weight: 500
-                
-            line-height: 150%
-
-        b,
-        strong
-            font-weight:600
+                size: 0.8em
+            
