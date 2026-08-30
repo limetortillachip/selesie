@@ -4,8 +4,8 @@
     +grid-flex($flow: column nowrap)
     flex: 1
     color: $primary
-    box-shadow: 2px 2px $shadow
-    border: 1px solid $shadow
+    background: $accent3 url("../../assets/crossed-heart-pixel.png")
+    background-size: 3px
     font:
         size: 14px
         family: $text
@@ -24,11 +24,21 @@
     h2
         font:
             size: 2em
+            weight: 900
+
+    h3
+        font:
+            size: 1.75em
+            weight: 800
+    h4
+        font:
+            size: 1.50em
             weight: 700
+
 
     a
         color: $accent2
-        font-weight: 600
+        font-weight: 700
         text-decoration-thickness: 1px
         text-underline-offset: 2px
 
@@ -47,11 +57,15 @@
         max-height: 3000px
 
 .content
-    background: $accent3 url("../../assets/crossed-heart-pixel.png")
-    background-size: 3px
     //border-block: 1px solid $primary
     align-self: stretch
-    padding: $bit
+
+    main
+        margin: $bit
+        padding: $bit
+        background: $accent1
+        border-radius: $cushion
+        border: 1px solid $primary
 
 .content,
 .title
@@ -60,16 +74,6 @@
 .top,
 .foo
     flex: 0
-
-.top>header
-    +grid-flex($flow: row nowrap)
-    border-block-end: 1px solid $primary
-    background: $accent1
-    padding-inline: $cushion
-    gap: $cushion
-
-    [data-top="navbar"]
-        flex: 5
 
     
 .title
@@ -113,57 +117,40 @@
         source: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
     */
     
+[data-page="home"]
+    +grid-flex($flow: row wrap)
+    gap: $bit
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px)
-    .page
-        font-size: 0.75em
 
-    [data-homepage="cards"]
-        +grid-flex($flow: column nowrap)
-
-    [data-card="dev"]
-        +grid-flex($flow: row nowrap)
-
-        [data-card="dev-icon"]
-            flex: 2
-        
-        [data-card="intro"]
-            flex: 3
-
+    [data-card="post"]
+        flex:  2
+    
+    [data-card="projects"]
+        flex: 1
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
-    [data-homepage="cards"]
-        +grid-flex($flow: row wrap)
+    [data-page="home"]
+        
     
-
-    [data-card="dev-card"]
-        +grid-flex($flow: column)
-
-    [data-homepage="card"]
-            flex: 45%
-
-    [data-card="post"],
-    [data-card="photo"]
-        flex: 75%
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) 
-    [data-homepage="card"]
-        flex: 50%
+    [data-card="dev"]
+        flex: 20%
 
+    [data-card="photo"]
+        flex: 50%
    
     
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) 
-    [data-homepage="card"]
-        flex: 40%
 
-    [data-card="dev"]
-        flex: 20%
+   
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) 

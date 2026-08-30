@@ -17,12 +17,17 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home posts={posts} />} />
-          <Route
-            path="photography"
-            element={<Photography photos={posts.photos} />}
-          />
-          <Route path="blog" element={<Blog post={posts.text} />} />
+          <Route path="about" />
           <Route path="credits" element={<Credits />} />
+
+          <Route path="photography">
+            <Route index element={<Photography photos={posts.photos} />} />
+            <Route path=":pid" />
+          </Route>
+          <Route path="blog">
+            <Route index element={<Blog post={posts.text} />} />
+            <Route path=":bid" />
+          </Route>
         </Route>
       </Routes>
     </div>

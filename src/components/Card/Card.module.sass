@@ -1,0 +1,72 @@
+@use '../../styles/base.sass' as *
+
+.selx
+    
+    [data-card="title"]
+        +grid-flex($flow: row nowrap)
+        +sel-font($fam: $code, $size: 1.1em, $thick: 600)
+        gap: $cushion
+        color: $accent2
+        padding-inline-start: calc($cushion*0.75)
+
+    [data-card="icon"]
+        +grid-flex($flow: column)
+        justify-content: center
+
+    [data-card="inner"]
+        background: $secondary
+        border: 1px inset $accent2
+        border-top: 5px solid $accent2
+        border-bottom: 2px solid $accent2
+        border-radius: 5px
+
+
+    [data-card="dev-icon"]
+        flex: 1
+
+        div
+            +grid-flex($flow: column)
+        
+
+    [data-card="dev-intro"]
+        font-family: $code
+        padding-inline: $bit
+        padding-block-end: $bit
+        flex: 1
+        
+        p
+            margin-block: 0
+
+    #post
+        padding-inline: $bit 
+        padding-block-end: $bit
+    
+    #projs
+        background: $accent2
+
+    [data-card="project-links"]
+        +grid-flex($flow: column nowrap)
+        gap: 1px
+
+        div
+            background: $secondary
+            padding-inline-start: $cushion
+    
+        
+            
+    @media only screen and (max-width: 600px)
+        #dev
+            +grid-flex($flow: column nowrap)
+
+        [data-card="dev-icon"]
+            border-bottom: 1px solid $accent2
+
+        [data-card="dev-intro"]
+            h2
+                font-size:  1.75em
+
+
+
+
+    
+    

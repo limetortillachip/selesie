@@ -5,7 +5,7 @@ import styles from "./Home.module.sass";
 function Home({ posts }) {
   const devCard = {
     type: "dev",
-    title: "Hi! Welcome to myspace.",
+    title: "Hi! Welcome to my space.",
     desc: "This page is a labor of love: fullstack front-end web development project featuring my photography, thoughts, and other coding projects.",
     photo: "https://i.imgur.com/T2gJ0ch.png",
   };
@@ -19,21 +19,14 @@ function Home({ posts }) {
   let randomPostNum = Math.floor(Math.random() * posts.text.length);
 
   return (
-    <article className={styles.homepage}>
-      <div data-homepage="cards">
-        <div data-homepage="card" data-card="dev">
-          <Card card={devCard} />
-        </div>
-        <div data-homepage="card" data-card="proj">
-          <Card card={projectsCard} />
-        </div>
-        <div data-homepage="card" data-card="post">
-          <Card card={posts.text[randomPostNum]} />
-        </div>
-        <div data-homepage="card" data-card="photo">
-          <Card card={posts.photos[randomPicNum]} />
-        </div>
-      </div>
+    <article className={styles.homepage} data-page="home">
+      <Card card={devCard} />
+
+      <Card card={projectsCard} />
+
+      <Card card={posts.text[randomPostNum]} />
+
+      <Card card={posts.photos[randomPicNum]} />
     </article>
   );
 }
