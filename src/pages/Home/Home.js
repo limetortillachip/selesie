@@ -7,7 +7,7 @@ function Home({ posts }) {
     type: "dev",
     title: "Hi! Welcome to my space.",
     desc: "This page is a labor of love: fullstack front-end web development project featuring my photography, thoughts, and other coding projects.",
-    photo: "https://i.imgur.com/T2gJ0ch.png",
+    photo: "https://i.imgur.com/6aKAg2B.png",
   };
 
   let projectsCard = {

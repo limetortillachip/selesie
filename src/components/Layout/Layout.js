@@ -8,13 +8,6 @@ function Layout() {
     <div className={styles.page}>
       <div className={styles.top}>
         <header>
-          <div data-top="navbar">
-            <Nav />
-          </div>
-        </header>
-      </div>
-      <div className={styles.content}>
-        <main>
           <div className={styles.title}>
             <span>
               <h1>selesie</h1>
@@ -23,6 +16,13 @@ function Layout() {
               <MoonIcon size={16} weight="fill" />
             </span>
           </div>
+          <div data-top="navbar">
+            <Nav />
+          </div>
+        </header>
+      </div>
+      <div className={styles.content}>
+        <main>
           <Outlet />
         </main>
       </div>

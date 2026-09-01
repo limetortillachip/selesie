@@ -1,37 +1,47 @@
 @use '../../styles/base.sass' as *
 
 .navBar
-    +grid-flex($flow: row wrap)
-    justify-content: space-around
+    +grid-flex($flow: row nowrap)
+    justify-content: space-evenly
     align-items: center
+    padding: $cushion
 
 .navLink
-    flex: 0 0 auto
     +grid-flex($flow: row nowrap)
-    gap: 5px
-    padding-block: $cushion
+    background: $accent2
+    border: 1px solid $accent2
+    border-radius: 3px
+    
 
 
 #link
-    flex: 0
-    height: 20px
-    flex: 0 0 auto
+    flex: 1
+    padding-inline: 5px
+    border-radius: 0 3px 3px 0
+    border: 1px solid $secondary
+    background: $secondary
 
     a
         letter-spacing: 0.001em
-        color: $primary
+        color: $accent2
         font:
             family: $code
             weight: 700
-            size: 16px
+            size: 12px
         
         text:
             decoration: none
             transform: lowercase
+#link:hover
+    border: 1px inset $accent1
+    trans
 
 .icon
     flex: 0
     +grid-flex($flow: column nowrap)
-    justify-content: center 
-    align-self: flex-end
-    color: $primary
+    justify-content: center
+    background: $accent1
+    padding-inline: 5px
+    border-radius: 3px 0 0 3px
+    border-right: 1px solid $accent2
+    color: $accent2

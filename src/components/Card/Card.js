@@ -98,7 +98,7 @@ function ProjectsCard({ card }) {
         <div data-card="icon">
           <CodeBlockIcon size={16} weight="fill" />
         </div>
-        <span data-card="type">projects</span>
+        <div data-card="type">projects</div>
       </div>
       <div data-card="inner" id={styles.projs}>
         <div data-card="project-links">

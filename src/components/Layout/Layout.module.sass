@@ -4,7 +4,7 @@
     +grid-flex($flow: column nowrap)
     flex: 1
     color: $primary
-    background: $accent3 url("../../assets/crossed-heart-pixel.png")
+    background: $accent1 url("../../assets/crossed-heart-pixel.png")
     background-size: 3px
     font:
         size: 14px
@@ -61,11 +61,8 @@
     align-self: stretch
 
     main
-        margin: $bit
         padding: $bit
-        background: $accent1
-        border-radius: $cushion
-        border: 1px solid $primary
+    
 
 .content,
 .title
@@ -79,6 +76,7 @@
 .title
     flex: 1
     +grid-flex($flow: row nowrap)
+    padding-inline: $bit
 
     h1  
         color: $primary
@@ -96,7 +94,7 @@
     font-weight: 700
     background: $accent1
     padding: 5px 0 2px 0
-    border-block-start: 1px solid $primary
+    border-block-start: 1px solid $accent2
     color: $accent2
     text:
         align: center
@@ -123,7 +121,6 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px)
-
     [data-card="post"]
         flex: 100%
     
@@ -133,7 +130,11 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
-    [data-page="home"]
+    [data-card="dev"]
+        flex: 20%
+
+    [data-card="projects"]
+        flex: 20%
         
     
 

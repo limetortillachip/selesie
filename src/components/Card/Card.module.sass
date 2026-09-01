@@ -1,41 +1,61 @@
 @use '../../styles/base.sass' as *
 
 .selx
-    
+    +grid-flex($flow: column nowrap)
+
     [data-card="title"]
+        flex: 0
         +grid-flex($flow: row nowrap)
-        +sel-font($fam: $code, $size: 1.1em, $thick: 600)
-        gap: $cushion
-        color: $accent2
-        padding-inline-start: calc($cushion*0.75)
+        +sel-font($fam: $code, $size: 0.9em, $thick: 600)
+        color: $secondary
+        
+
+    [data-card="type"],
+    [data-card="icon"]
+        background: $accent2
+
+    [data-card="type"]
+        padding-inline-end: $cushion
+        border-radius: 0 5px 0 0
 
     [data-card="icon"]
         +grid-flex($flow: column)
         justify-content: center
+        padding-inline: $cushion
+        border-radius: 5px 0 0 0
 
     [data-card="inner"]
         background: $secondary
-        border: 1px inset $accent2
-        border-top: 5px solid $accent2
-        border-bottom: 2px solid $accent2
-        border-radius: 5px
+        border-inline: 1px inset $accent2
+        border-block: 3px solid $accent2
+        border-radius: 0 5px 5px 5px
 
 
     [data-card="dev-icon"]
-        flex: 1
+        flex: 20%
 
         div
             +grid-flex($flow: column)
         
 
     [data-card="dev-intro"]
+        flex: 1
         font-family: $code
         padding-inline: $bit
         padding-block-end: $bit
-        flex: 1
+        +grid-flex($flow: column nowrap)
+        justify-content: center
+        gap: $cushion
+        
+
+        h2
+            margin-block-start: $cushion
+            margin-block-end: 0
         
         p
+            font-size: 0.75em
             margin-block: 0
+            line-height: 150%
 
     #post
         padding-inline: $bit 
@@ -56,14 +76,11 @@
             
     @media only screen and (max-width: 600px)
         #dev
-            +grid-flex($flow: column nowrap)
-
-        [data-card="dev-icon"]
-            border-bottom: 1px solid $accent2
+            +grid-flex($flow: row nowrap)
 
         [data-card="dev-intro"]
             h2
-                font-size:  1.75em
+                font-size:  1.25em
 
 
 
