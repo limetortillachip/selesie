@@ -13,7 +13,7 @@ function Layout() {
               <h1>selesie</h1>
             </span>
             <span id={styles.icon}>
-              <MoonIcon size={16} weight="fill" />
+              <MoonIcon size={16} weight="bold" />
             </span>
           </div>
           <div data-top="navbar">
