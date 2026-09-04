@@ -71,12 +71,25 @@
         div
             background: $secondary
             padding-inline: $cushion
+
+    [data-card="img"]
+        +grid-flex($flow: column)
+        border-bottom: 2px solid $accent2
+
+    [data-card="img-caption"]>p
+        margin-block: 0
+        padding: $cushion $bit
+
+
     
         
             
     @media only screen and (max-width: 600px)
         #dev
             +grid-flex($flow: row nowrap)
+        
+        [data-card="dev-icon"]
+            border-right: 1px solid $accent2
 
         [data-card="dev-intro"]
             h2
