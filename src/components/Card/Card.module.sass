@@ -40,6 +40,7 @@
         background: $accent1
         border-bottom: 1px solid $accent2
         padding-inline: $bit
+        color: $shadow
 
 
     [data-card="dev-icon"]
@@ -82,7 +83,13 @@
 
     [data-card="img"]
         +grid-flex($flow: column)
-        border-bottom: 2px solid $accent2
+        border-bottom: 1px solid $accent2
+
+    [data-card="img-caption"]
+        p  
+            background: $secondary
+            font-weight: 600
+
 
 
     
