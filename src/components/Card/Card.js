@@ -51,10 +51,12 @@ function PostCard({ card }) {
           </span>
         </div>
         <div data-card="post-body">
-          {compiler(card.body[0])}...
-          <span>
-            <a href="/blog">Read More</a>
-          </span>
+          <p>
+            {compiler(card.body[0])}...
+            <span>
+              <a href="/blog">Read More</a>
+            </span>
+          </p>
         </div>
       </div>
     </article>
