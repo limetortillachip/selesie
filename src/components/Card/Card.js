@@ -4,6 +4,7 @@ import {
   CodeBlockIcon,
   ImageSquareIcon,
   NoteIcon,
+  TerminalIcon,
   UserCircleIcon,
 } from "@phosphor-icons/react";
 
@@ -23,12 +24,17 @@ function DevCard({ card }) {
           </div>
         </div>
         <div data-card="dev-intro">
-          <span data-card="intro-title">
-            <h2>{card.title}</h2>
-          </span>
-          <span data-card="desc">
+          <div data-card="intro">
+            <span data-card="intro-icon">
+              <TerminalIcon size={16} weight="bold" />
+            </span>
+            <span data-card="intro-title">
+              <h2>{card.title}</h2>
+            </span>
+          </div>
+          <div data-card="desc">
             <p>{compiler(card.desc)}</p>
-          </span>
+          </div>
         </div>
       </div>
     </article>

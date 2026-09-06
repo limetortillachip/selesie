@@ -37,37 +37,40 @@
 
 
     [data-card="post-title"]
-        background: $accent1
-        border-bottom: 1px solid $accent2
         padding-inline: $bit
         color: $shadow
 
 
     [data-card="dev-icon"]
-        flex: 20%
+        flex: 15%
 
         div
             +grid-flex($flow: column)
         
 
     [data-card="dev-intro"]
-        flex: 1
-        font-family: $code
-        padding-inline: $bit
-        padding-block-end: $bit
         +grid-flex($flow: column nowrap)
-        justify-content: center
+        flex: 1
         gap: $cushion
-        
 
-        h2
-            margin-block: 0
-        
         p
+            font-family: $code
             font-size: 0.75em
             margin-block: 0
             line-height: 150%
-            padding: 0
+        
+    [data-card="intro"]
+        background: $accent1
+        padding-inline: $cushion
+        padding-block-start: $cushion
+        padding-block-end: calc($cushion/2)
+        border-block-end: 1px solid $accent2
+        
+        h2
+            margin-block: 0
+         
+        
+        
 
     
     #projs
