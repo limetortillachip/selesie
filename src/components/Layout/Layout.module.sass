@@ -61,10 +61,9 @@
     align-self: stretch
     gap: $bit
     padding: $bit
+    border-radius: 3px
+    border-block: 1px solid $primary
 
-    main>div
-        flex: 75%
-        padding: $bit
 
 
     
@@ -82,7 +81,6 @@
     background: $accent2
     padding-block: $bit
     padding-inline: $cushion
-    border-bottom: 1px solid $primary
     @extend .column
 
     
@@ -109,7 +107,6 @@
 
 .foo
     background: $accent2
-    border-top: 1px solid $primary
     
     footer  
         +grid-flex($flow: row nowrap)

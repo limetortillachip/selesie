@@ -23,7 +23,9 @@ function Layout() {
       </div>
 
       <main className={styles.content}>
-        <Outlet />
+        <div>
+          <Outlet />
+        </div>
       </main>
 
       <div className={styles.foo}>
