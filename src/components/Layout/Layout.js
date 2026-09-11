@@ -12,14 +12,14 @@ function Layout() {
             <span>
               <h1>selesie</h1>
             </span>
-            <span id={styles.icon}>
+            <div id={styles.topIcon}>
               <MoonIcon size={16} weight="fill" />
-            </span>
-          </div>
-          <div data-top="navbar">
-            <Nav />
+            </div>
           </div>
         </header>
+        <div data-top="navbar">
+          <Nav />
+        </div>
       </div>
 
       <main className={styles.content}>

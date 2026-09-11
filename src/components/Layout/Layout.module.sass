@@ -4,8 +4,7 @@
     +grid-flex($flow: column nowrap)
     flex: 1
     color: $primary
-    background: $accent1 url("../../assets/crossed-heart-pixel.png")
-    background-size: 3px
+    background: $accent2
     font:
         size: 14px
         family: $text
@@ -56,14 +55,18 @@
         max-height: 3000px
 
 .content
-    //border-block: 1px solid $primary
-    +grid-flex($flow: row)
+    background: $accent1 url("../../assets/crossed-heart-pixel.png")
+    background-size: 3px
+    +grid-flex($flow: column nowrap)
     align-self: stretch
+    gap: $bit
     padding: $bit
 
-    main
-        flex: 1
+    main>div
+        flex: 75%
         padding: $bit
+
+
     
 
 .content,
@@ -76,22 +79,19 @@
 
 
 .top
-    header,
-    [data-top="navbar"]
-        @extend .column
-        gap: $bit
+    background: $accent2
+    padding-block: $bit
+    padding-inline: $cushion
+    border-bottom: 1px solid $primary
+    @extend .column
+
     
-[data-top="navbar"]
-    padding-inline: $bit
     
 .title
     flex: 1
     +grid-flex($flow: row nowrap)
     color: $secondary
-    background: $accent2
-    padding-block-start: $bit
-    padding-inline: $cushion
-    border-bottom: 1px solid $accent2
+    
 
     h1  
         text-shadow: 1px 1px $accent1
@@ -109,7 +109,7 @@
 
 .foo
     background: $accent2
-    border-top: 1px solid $accent2
+    border-top: 1px solid $primary
     
     footer  
         +grid-flex($flow: row nowrap)
@@ -128,7 +128,7 @@
 
         a:hover
             color: $secondary
-
+.topIcon,
 .fooIcon
     +grid-flex($flow: row)
     align-items: center

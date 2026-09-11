@@ -3,12 +3,12 @@
 .navBar
     +grid-flex($flow: row nowrap)
     justify-content: space-around
-    align-items: center
+    align-items: flex-start
 
 .navLink
     +grid-flex($flow: row nowrap)
     background: $accent2
-    border: 1px solid $accent2
+    border: 1px solid $primary
     border-radius: 3px
     
 
@@ -17,8 +17,9 @@
     flex: 1
     padding-inline: 5px
     border-radius: 0 3px 3px 0
-    border: 1px solid $secondary
+    border: 1px solid $accent1
     background: $secondary
+    transition: border 2s 1s
 
     a
         letter-spacing: 0.001em
@@ -33,7 +34,6 @@
             transform: lowercase
 #link:hover
     border: 1px inset $accent1
-    trans
 
 .icon
     flex: 0
