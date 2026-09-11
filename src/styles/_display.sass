@@ -7,3 +7,9 @@ $byte: calc($bit*2)
 =grid-flex ($flow)
     display: flex
     flex-flow: $flow
+
+.column
+    +grid-flex($flow: column nowrap)
+
+.row
+    +grid-flex($flow: row)

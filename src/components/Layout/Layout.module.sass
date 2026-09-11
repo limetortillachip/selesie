@@ -76,20 +76,22 @@
 
 
 .top
-    padding: $bit
-    background: $accent2
-    border-bottom: 1px solid $primary
+    header,
+    [data-top="navbar"]
+        @extend .column
+        gap: $bit
     
-    header
-        +grid-flex($flow: column nowrap)
-        
-        
-
+[data-top="navbar"]
+    padding-inline: $bit
     
 .title
     flex: 1
     +grid-flex($flow: row nowrap)
     color: $secondary
+    background: $accent2
+    padding-block-start: $bit
+    padding-inline: $cushion
+    border-bottom: 1px solid $accent2
 
     h1  
         text-shadow: 1px 1px $accent1
@@ -102,9 +104,12 @@
         letter-spacing: -0.075em
 
 
+
+
+
 .foo
     background: $accent2
-    border-top: 1px solid $primary
+    border-top: 1px solid $accent2
     
     footer  
         +grid-flex($flow: row nowrap)
@@ -116,14 +121,13 @@
             size: 9px
         text-transform: uppercase
         padding: 0px 5px
-        border: 1px solid $accent2
         color: $secondary
 
         a
             color: $accent1
 
         a:hover
-            color: $accent2
+            color: $secondary
 
 .fooIcon
     +grid-flex($flow: row)

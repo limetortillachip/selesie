@@ -10,41 +10,39 @@ import {
 
 export default function Nav() {
   return (
-    <>
-      <nav className={styles.navBar}>
-        <div className={styles.navLink}>
-          <span className={styles.icon}>
-            <StarAndCrescentIcon size={14} weight="fill" />
-          </span>
-          <span id={styles.link}>
-            <Link to="/">Home</Link>
-          </span>
-        </div>
-        <div className={styles.navLink}>
-          <span className={styles.icon}>
-            <CameraIcon size={14} weight="fill" />
-          </span>
-          <span id={styles.link}>
-            <Link to="/photography">Photography</Link>
-          </span>
-        </div>
-        <div className={styles.navLink}>
-          <span className={styles.icon}>
-            <NewspaperClippingIcon size={14} weight="fill" />
-          </span>
-          <span id={styles.link}>
-            <Link to="/blog">Blog</Link>
-          </span>
-        </div>
-        <div className={styles.navLink}>
-          <span className={styles.icon}>
-            <ShootingStarIcon size={14} weight="fill" />
-          </span>
-          <span id={styles.link}>
-            <Link to="/credits">Credits</Link>
-          </span>
-        </div>
-      </nav>
-    </>
+    <nav className={styles.navBar}>
+      <div className={styles.navLink}>
+        <span className={styles.icon}>
+          <StarAndCrescentIcon size={14} weight="fill" />
+        </span>
+        <span id={styles.link}>
+          <Link to="/">Home</Link>
+        </span>
+      </div>
+      <div className={styles.navLink}>
+        <span className={styles.icon}>
+          <CameraIcon size={14} weight="fill" />
+        </span>
+        <span id={styles.link}>
+          <Link to="/photography">Photography</Link>
+        </span>
+      </div>
+      <div className={styles.navLink}>
+        <span className={styles.icon}>
+          <NewspaperClippingIcon size={14} weight="fill" />
+        </span>
+        <span id={styles.link}>
+          <Link to="/blog">Blog</Link>
+        </span>
+      </div>
+      <div className={styles.navLink}>
+        <span className={styles.icon}>
+          <ShootingStarIcon size={14} weight="fill" />
+        </span>
+        <span id={styles.link}>
+          <Link to="/credits">Credits</Link>
+        </span>
+      </div>
+    </nav>
   );
 }
