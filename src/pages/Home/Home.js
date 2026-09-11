@@ -21,10 +21,10 @@ function Home({ posts }) {
   return (
     <article className={styles.homepage} data-page="home">
       <Card card={devCard} />
-
-      <Card card={projectsCard} />
-
-      <Card card={posts.text[randomPostNum]} />
+      <div data-page="column">
+        <Card card={projectsCard} />
+        <Card card={posts.text[randomPostNum]} />
+      </div>
 
       <Card card={posts.photos[randomPicNum]} />
     </article>

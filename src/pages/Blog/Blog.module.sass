@@ -4,7 +4,7 @@
 #icon
 
 .posts
-    +grid-flex($flow: column wrap)
+    +grid-flex($flow: row wrap)
     gap: 2px
     background: $accent2
     border: 1px solid $accent2
@@ -14,4 +14,9 @@
 
     article
         background: $secondary
+
+/* small devices (phones, 900px and down) */
+@media only screen and (max-width: 900px)
+    .posts
+        +grid-flex(column)
 

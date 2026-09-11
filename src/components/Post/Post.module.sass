@@ -1,13 +1,8 @@
 @use '../../styles/base.sass' as * 
 
 .post
-    flex: 1
     +grid-flex($flow: row wrap)
-
-.text    
-    //+sel-post
-    flex: 0 1 auto
-    border-radius: 5px
+    flex: 45%
 
 .title
     h3
@@ -19,6 +14,7 @@
     +sel-strong
     color: $accent2
 
-@media only screen and (max-width: 600px)
-    .text
-        padding: $byte
+.text
+    padding: $byte
+
+    
