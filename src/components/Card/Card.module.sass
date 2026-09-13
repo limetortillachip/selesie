@@ -3,10 +3,12 @@
 .selx
     +grid-flex($flow: column nowrap)
 
+    
+
     [data-card="title"]
         flex: 0
         +grid-flex($flow: row nowrap)
-        +sel-font($fam: $code, $size: 0.9em, $thick: 600)
+        +sel-font($fam: $code, $size: 0.8em, $thick: 600)
         color: $secondary
         
 
@@ -24,11 +26,17 @@
         padding-inline: $cushion
         border-radius: 5px 0 0 0
 
-    [data-card="inner"]
-        +grid-flex($flow: column nowrap)
+    [data-card="body"]
         +borders
         border-radius: 0 5px 5px 5px
+        background: $accent1
+        padding: 2px
 
+
+    [data-card="inner"]
+        +grid-flex($flow: column nowrap)
+        border: 1px solid $accent2
+        background: $secondary
         p
             margin-block: 0
             padding: $cushion $bit
@@ -36,11 +44,10 @@
 
     [data-card="post-title"]
         padding-inline: $bit
-        color: $shadow
 
 
     [data-card="dev-icon"]
-        flex: 15%
+        flex: 12%
 
         div
             +grid-flex($flow: column)
@@ -48,26 +55,31 @@
 
     [data-card="dev-intro"]
         +grid-flex($flow: column nowrap)
+        justify-content: flex-end
         flex: 1
         gap: $cushion
+
+        
+        
+    [data-card="intro"]
+        flex: 0
+        padding-inline: $cushion
+        padding-block-start: $bit
+        padding-block-end: calc($cushion/2)
+        border-block-end: 1px solid $accent2
+        background: $light
+        
+        h2
+            margin-block: 0
+         
+    [data-card="desc"]
+        flex:1
 
         p
             font-family: $code
             font-size: 0.75em
             margin-block: 0
             line-height: 150%
-        
-    [data-card="intro"]
-        background: $accent1
-        padding-inline: $cushion
-        padding-block-start: $cushion
-        padding-block-end: calc($cushion/2)
-        border-block-end: 1px solid $accent2
-        
-        h2
-            margin-block: 0
-         
-        
         
 
     
