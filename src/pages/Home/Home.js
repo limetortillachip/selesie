@@ -5,7 +5,7 @@ import styles from "./Home.module.sass";
 function Home({ posts }) {
   const devCard = {
     type: "dev",
-    title: "Hi! I'm Shanon!",
+    title: "Hi! I'm Shanon.",
     desc: "This page is a labor of love: fullstack front-end web development project featuring my photography, thoughts, and other coding projects.",
     photo: "https://i.imgur.com/6aKAg2B.png",
   };

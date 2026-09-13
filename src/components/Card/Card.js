@@ -7,6 +7,7 @@ import {
   TerminalIcon,
   UserCircleIcon,
 } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 function DevCard({ card }) {
   return (
@@ -63,7 +64,7 @@ function PostCard({ card }) {
             <p>
               {compiler(card.body[0])}...
               <span>
-                <a href="/blog">Read More</a>
+                <Link to="/blog">Read More</Link>
               </span>
             </p>
           </div>

@@ -8,7 +8,7 @@
     [data-card="title"]
         flex: 0
         +grid-flex($flow: row nowrap)
-        +sel-font($fam: $code, $size: 0.8em, $thick: 600)
+        +sel-font($fam: $code, $size: 0.8em, $thick: 700)
         color: $secondary
         
 
@@ -43,7 +43,10 @@
 
 
     [data-card="post-title"]
-        padding-inline: $bit
+        padding-inline: $cushion
+        background: $light
+        border-bottom: 1px solid $accent2
+        border-left: 2px solid $accent2
 
 
     [data-card="dev-icon"]
@@ -70,6 +73,8 @@
         background: $light
         
         h2
+            +sel-font($fam: $code, $size: 16px, $thick: 800)
+            text-transform: uppercase
             margin-block: 0
          
     [data-card="desc"]
@@ -111,13 +116,16 @@
     @media only screen and (max-width: 600px)
         #dev
             +grid-flex($flow: row nowrap)
+            font-size:  0.90em
+
+            h2
+                font-size: 14px
         
         [data-card="dev-icon"]
             border-right: 1px solid $accent2
 
-        [data-card="dev-intro"]
-            h2
-                font-size:  1.40em
+
+                
 
     
 
