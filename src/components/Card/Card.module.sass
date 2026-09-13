@@ -49,6 +49,7 @@
         border-left: 2px solid $accent2
 
 
+
     [data-card="dev-icon"]
         flex: 12%
 
@@ -101,12 +102,16 @@
 
     [data-card="img"]
         +grid-flex($flow: column)
-        border-bottom: 1px solid $accent2
+        
 
     [data-card="img-caption"]
+        border-top: 1px solid $accent2
         p  
-            background: $secondary
-            font-weight: 600
+            background: $light
+            +sel-font($fam: $code, $size: 11px, $thick: 500)
+            font-style: italic
+            line-height: 150%
+    
 
 
 
