@@ -1,13 +1,17 @@
 @use '../../styles/base.sass' as * 
 
 .post
-    +grid-flex($flow: row wrap)
     flex: 45%
     +borders
     border-block: 1px solid $accent2
     border-inline: 3px solid $accent2
 
 .title
+    background: $light
+    border-bottom: 1px solid $accent2
+
+    padding-inline: $cushion
+
     h3
         font:
             size: 1.75em
@@ -18,6 +22,7 @@
     color: $accent2
 
 .text
-    padding: $byte
+    @extend .column
 
-    
+.par
+    padding: $cushion $bit

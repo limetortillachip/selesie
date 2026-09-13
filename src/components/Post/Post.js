@@ -14,13 +14,16 @@ function Post({ post }) {
     <article className={styles.post} key={post.id}>
       <div className={styles.text}>
         <div className={styles.title}>
-          <h3>{post.title}</h3>
+          <div>
+            <h3>{post.title}</h3>
+          </div>
+          <div className={styles.date}>
+            <span>
+              {postDateMonth}, {postDate}.
+            </span>
+          </div>
         </div>
-        <div className={styles.date}>
-          <span>
-            {postDateMonth}, {postDate}.
-          </span>
-        </div>
+
         <div className={styles.par}>
           {post.body.map((text, i) => {
             const jsxText = compiler(text);
